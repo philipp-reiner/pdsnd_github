@@ -2,6 +2,7 @@ import time
 import pandas as pd
 import numpy as np
 
+
 CITY_DATA = { 'chicago': 'C:/Users/Philipp/Desktop/Udacity/Python/Projekt/chicago.csv',
               'new york city': 'C:/Users/Philipp/Desktop/Udacity/Python/Projekt/new_york_city.csv',
               'washington': 'C:/Users/Philipp/Desktop/Udacity/Python/Projekt/washington.csv' }
@@ -103,20 +104,19 @@ def time_stats(df):
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
     
+
     # display the most common month
-    if month == 'all':
-        # extract month from the Start Time column to create a month column
-        df ['month'] = df['Start Time'].dt.month_name()
+    # extract month from the Start Time column to create a month column
+    df ['month'] = df['Start Time'].dt.month_name()
     
-        popular_month = df['month'].mode()[0]
-        print('Most Frequent Month:', popular_month)   
+    popular_month = df['month'].mode()[0]
+    print('Most Frequent Month:', popular_month)   
     
     # display the most common day of week   
-    if day == 'All':    
-        # extract day from the Start Time column to create a day column
-        df ['day'] = df['Start Time'].dt.day_name()
-        popular_day = df['day'].mode()[0]
-        print('Most Frequent Day:', popular_day)
+    # extract day from the Start Time column to create a day column
+    df ['day'] = df['Start Time'].dt.day_name()
+    popular_day = df['day'].mode()[0]
+    print('Most Frequent Day:', popular_day)
               
     # find the most common hour (from 0 to 23)
     df['hour'] = df['Start Time'].dt.hour
@@ -186,7 +186,7 @@ def user_stats(df):
     print()
 
     # Display counts of gender
-    if city == 'chicago' or city == 'new york city':
+    if 'Gender' in df.columns:
         gender = df['Gender'].value_counts()
         print('Counts of gender:')
         print(gender)
@@ -209,7 +209,6 @@ def main():
     while True:
         city, month, day = get_filters()
         df = load_data(city, month, day)
-
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
