@@ -1,10 +1,10 @@
 ### Date created
 This project was created at the 27th of November 2019
 
-### US bikeshare data exploration
+### US Bikeshare Data Exploration
 
 ### Description
-This programm explores bikeshare data from chicago, new york city and washington.
+This programm explores bikeshare data from chicago, new york city and washington.  
 Various statistics can be derived for different months and days.
 
 ### Files used
