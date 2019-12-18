@@ -1,15 +1,18 @@
 ### Date created
-Include the date you created this project and README file.
+This project was created at the 27th of November 2019
 
-### Project Title
-Replace the Project Title
+### US bikeshare data exploration
 
 ### Description
-Describe what your project is about and what it does
+This programm explores bikeshare data from chicago, new york city and washington.
+Various statistics can be derived for different months and days.
 
 ### Files used
-Include the files used
+bikeshare.py
+chicago.csv
+new_york_city.csv
+washington.csv
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+The framework for the bikeshare code is from Udacity ND Programming for Data Science wiht Python
 
